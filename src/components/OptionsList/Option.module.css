@@ -1,0 +1,24 @@
+div{
+    width: 100%;
+}
+.select{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    background-color:transparent;
+    color:white;
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.newVideo{
+    background-color: var(--DarkGrey);
+}
+
+.updateVideo{
+    border: 2px solid var(--Blue);
+    color: white;
+    background-color:rgba(3, 18, 47, 1);
+}

@@ -1,0 +1,118 @@
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(3, 18, 47, 0.1);
+
+}
+
+dialog{
+    position: absolute; /* Posición fija para que el modal se quede en la pantalla al hacer scroll */
+    top: 10px;
+    background: rgba(3, 18, 47, 1);
+    width: 500px;
+    height: 630px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 5px solid rgba(107, 209, 255, 1)
+}
+
+.iconClose{
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.formContainer{
+    color: white;
+    flex-direction: column;
+}
+
+.title{
+    font-family: var(--font2);
+    font-size:40px;
+    font-weight: 900;
+    color: rgba(34, 113, 209, 1);
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.form input{
+    color: rgba(165, 165, 165, 1);
+    padding: 5px;
+    border-radius: 10px;
+    border: 3px solid var(--Blue, rgba(34, 113, 209, 1));
+    background-color: transparent;
+}
+
+#description textarea{
+    margin-top: 8px;
+    height: 70px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid var(--Blue, rgba(34, 113, 209, 1));
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    padding:  10px;
+    border-color: red;
+}
+
+@media (max-width:480px){
+    dialog{
+        width: 80%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    .iconClose{
+        width: 24px;
+        height: 24px;
+    }
+
+    .title{
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    .description{
+        height: 20px;
+    }
+
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+}

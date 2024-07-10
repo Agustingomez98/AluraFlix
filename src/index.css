@@ -1,0 +1,28 @@
+:root {
+  --font: "Source Sans 3", sans-serif;
+  --font2: "Roboto", sans-serif;
+  --Blue: rgba(34, 113, 209, 1);
+  --BlueDark: rgba(0, 0, 0, 0.9);
+  --DarkGrey: rgba(38, 38, 38, 1);
+  --Green: rgba(0, 200, 111, 1);
+  --SkyBlue: rgba(107, 209, 255, 1);
+  --Yellow: rgba(255, 186, 5, 1);
+
+}
+
+/* Define el contenedor principal con flexbox */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--DarkGrey);
+
+}
+
+/* El contenido principal debe crecer para ocupar el espacio disponible */
+.main-content {
+  flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
