@@ -1,16 +1,42 @@
 import styles from "./Banner.module.css"
-import bannerDescription from "./bannerDescription.png"
+import { GlobalContext } from './../../contexts/contexts';
+import { useContext } from "react";
+import { Category } from './../Category/Category';
 
-export const Banner = () => {
+export const Banner = ({ bannerInfo }) => {
 
-    return(
-        <section className={styles.banner} >
+    const { categories } = useContext(GlobalContext)
+
+    if (!bannerInfo || !bannerInfo.title) {
+        return null; // o algún componente de fallback
+    }
+
+    const { title, category, description, photo, link } = bannerInfo;
+
+    const getColor = (categoryName) => {
+        const category = categories.find(cat => cat.name === categoryName);
+        console.log("color",);
+        return category ? category.color : "";
+    }
+
+    const color = getColor(category);
+    console.log("color", color);
+
+    return (
+        <section className={styles.banner} id="banner">
             <div className={styles.card}>
-                <h1>FRONT END</h1>
-                <h3>Challenge React</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ex labore fugiat, facilis quisquam animi similique rem dolorem quidem iste?</p>
+                <h1 style={{ backgroundColor: color }}>{category}</h1>
+                <h3>{title}</h3>
+                <p>{description}</p>
             </div>
-            <img className={styles.description} src={bannerDescription} alt="imagen descripcion" />
+            <iframe
+                className={styles.iframe}
+                src={link}
+                alt="video descripcion"
+                title="Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen>
+            </iframe>
         </section>
     )
 }

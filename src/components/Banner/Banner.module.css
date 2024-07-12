@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    padding: 5rem;
     gap: 3rem;
 }
 
@@ -42,10 +42,17 @@
     line-height: 21px;
 }
 
-.description{
-    width: 647px;
+.iframe{
+    width: 100%;
     height: 333px;
+    border-radius: 10px;
 }
+
+.iframe:hover{
+    filter: brightness(1.4);
+    color: var(--Blue);
+}
+
 @media (max-width: 1000px) {
     .banner{
         flex-direction: column;

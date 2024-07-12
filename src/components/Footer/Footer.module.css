@@ -8,6 +8,7 @@
     border-top: 4px solid var(--Blue, rgba(34, 113, 209, 1));
     box-shadow: 0px 5px 29px 0px rgba(34, 113, 209, 0.7);
     position: relative;
+    margin-top: 2rem;
 }
 
 .social {
@@ -18,10 +19,6 @@
 
 .social img {
     width: 30px;
-}
-
-.logoContainer{
-
 }
 
 .info {
